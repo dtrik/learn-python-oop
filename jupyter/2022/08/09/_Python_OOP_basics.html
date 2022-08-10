@@ -305,6 +305,7 @@ Thorin
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Radiant</span><span class="p">():</span>
+    <span class="s2">"Class with constructor"</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span> <span class="o">=</span> <span class="n">first_name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">last_name</span>
@@ -420,12 +421,13 @@ Kholin
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Radiant</span><span class="p">():</span>
+    <span class="s2">"Class with constructor and method"</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span> <span class="o">=</span> <span class="n">first_name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">last_name</span>
     
     <span class="k">def</span> <span class="nf">take_first_oath</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"Life before death. Strength before weakness. Journey before destination."</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> is taking the following oath: Life before death. Strength before weakness. Journey before destination."</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">oath_count</span> <span class="o">=</span> <span class="mi">1</span>
     
 <span class="n">radiant_1</span> <span class="o">=</span> <span class="n">Radiant</span><span class="p">(</span><span class="s2">"Kaladin"</span><span class="p">,</span> <span class="s2">"Stormblessed"</span><span class="p">)</span>
@@ -443,7 +445,7 @@ Kholin
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Life before death. Strength before weakness. Journey before destination.
+<pre>Kaladin is taking the following oath: Life before death. Strength before weakness. Journey before destination.
 Kaladin Stormblessed has taken 1 oaths
 </pre>
 </div>
@@ -458,7 +460,7 @@ Kaladin Stormblessed has taken 1 oaths
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The above method not only prints the first oath but also updates a newly created attribute for the instance called 'oath_count'. We can see how the method is called. The following two are equivalent:</p>
+<p>The above method not only prints the first oath but also updates a newly created attribute for the instance called 'oath_count'.</p>
 
 </div>
 </div>
@@ -472,8 +474,42 @@ Kaladin Stormblessed has taken 1 oaths
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">radiant_2</span> <span class="o">=</span> <span class="n">Radiant</span><span class="p">(</span><span class="s2">"Dalinar"</span><span class="p">,</span> <span class="s2">"Thorin"</span><span class="p">)</span>
 <span class="n">radiant_2</span><span class="o">.</span><span class="n">take_first_oath</span><span class="p">()</span>
-<span class="n">Radiant</span><span class="o">.</span><span class="n">take_first_oath</span><span class="p">(</span><span class="n">radiant_2</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">radiant_2</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">radiant_2</span><span class="o">.</span><span class="n">last_name</span><span class="si">}</span><span class="s2"> has taken </span><span class="si">{</span><span class="n">radiant_2</span><span class="o">.</span><span class="n">oath_count</span><span class="si">}</span><span class="s2"> oaths"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">The</span> <span class="n">following</span> <span class="n">two</span> <span class="n">are</span> <span class="n">equivalent</span><span class="p">:</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">radiant_2</span><span class="o">.</span><span class="n">take_first_oath</span><span class="p">()</span>
+<span class="n">Radiant</span><span class="o">.</span><span class="n">take_first_oath</span><span class="p">(</span><span class="n">radiant_2</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -486,8 +522,8 @@ Kaladin Stormblessed has taken 1 oaths
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Life before death. Strength before weakness. Journey before destination.
-Life before death. Strength before weakness. Journey before destination.
+<pre>Dalinar is taking the following oath: Life before death. Strength before weakness. Journey before destination.
+Dalinar is taking the following oath: Life before death. Strength before weakness. Journey before destination.
 Dalinar Thorin has taken 1 oaths
 </pre>
 </div>
@@ -528,7 +564,7 @@ Dalinar Thorin has taken 1 oaths
         <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">last_name</span>
     
     <span class="k">def</span> <span class="nf">take_first_oath</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"Life before death. Strength before weakness. Journey before destination."</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> is taking the following oath: Life before death. Strength before weakness. Journey before destination."</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">oath_count</span> <span class="o">=</span> <span class="mi">1</span>
     
 <span class="n">radiant_1</span> <span class="o">=</span> <span class="n">Radiant</span><span class="p">(</span><span class="s2">"Kaladin"</span><span class="p">,</span> <span class="s2">"Stormblessed"</span><span class="p">)</span>
@@ -549,9 +585,9 @@ Dalinar Thorin has taken 1 oaths
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Life before death. Strength before weakness. Journey before destination.
+<pre>Kaladin is taking the following oath: Life before death. Strength before weakness. Journey before destination.
 Kaladin Stormblessed has taken 1 oaths
-Life before death. Strength before weakness. Journey before destination.
+Dalinar is taking the following oath: Life before death. Strength before weakness. Journey before destination.
 Dalinar Thorin has taken 1 oaths
 </pre>
 </div>
