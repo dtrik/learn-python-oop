@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      7 min read
     
 </span></p>
 
@@ -567,7 +567,7 @@ First oath of radiant_2: Beautiful is better than ugly. Explicit is better than 
 <h2 id="Class-Methods">
 <a class="anchor" href="#Class-Methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Class Methods<a class="anchor-link" href="#Class-Methods"> </a>
 </h2>
-<p>Class methods receive the class itself as the input instead of the instance. Suppose from our above example, we want to update the first oath of the class itself. For this, we need to add a classmethod decorator (@classmethod) above the name of the new method. Here is how we can do that:</p>
+<p>Class methods receive the class itself as the input instead of the instance. Suppose from our above example, we want to update the first oath of the class itself. For this, we need to add a classmethod decorator (@classmethod) above the method definition. Here is how we can do that:</p>
 
 </div>
 </div>
@@ -712,7 +712,74 @@ Stormblessed
 <h2 id="Static-Methods">
 <a class="anchor" href="#Static-Methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Static Methods<a class="anchor-link" href="#Static-Methods"> </a>
 </h2>
-<p>Static methods are basically functions but are part of a class because they are connected to the class. For eg, suppose</p>
+<p>Static methods are basically functions that are part of a class because they are connected to the class. They do not receive the instance or class as default inputs. Suppose we want our Radiant is very frustrated and wants to swear, let us see how to use static methods to do that. Static methods are created by adding a staticmethod decorator (@staticmethod) above the method definition.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Radiant</span><span class="p">():</span>
+    <span class="n">num_radiants</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">first_oath</span> <span class="o">=</span> <span class="s2">"Life before death. Strength before weakness. Journey before destination."</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span> <span class="o">=</span> <span class="n">first_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">last_name</span>
+    
+    <span class="k">def</span> <span class="nf">take_first_oath</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> is taking the first oath: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_oath</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">oath_count</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">Radiant</span><span class="o">.</span><span class="n">num_radiants</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">update_oath</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">oath</span><span class="p">):</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">first_oath</span> <span class="o">=</span> <span class="n">oath</span>
+    
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_full_name</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">full_name</span><span class="p">):</span>
+        <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span> <span class="o">=</span> <span class="n">full_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">' '</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">)</span>
+    
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">swear</span><span class="p">(</span><span class="n">curse</span><span class="o">=</span><span class="s2">"Kelek's Breath"</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">curse</span><span class="p">)</span>
+        
+<span class="n">Radiant</span><span class="o">.</span><span class="n">swear</span><span class="p">()</span>
+<span class="n">radiant_1</span> <span class="o">=</span> <span class="n">Radiant</span><span class="o">.</span><span class="n">from_full_name</span><span class="p">(</span><span class="s2">"Dalinar Thorin"</span><span class="p">)</span>
+<span class="n">radiant_1</span><span class="o">.</span><span class="n">swear</span><span class="p">(</span><span class="s2">"Blood of my father"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Kelek's Breath
+Blood of my father
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now that our Radiants can swear different first oaths as well as</p>
 
 </div>
 </div>
