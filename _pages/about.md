@@ -1,10 +1,10 @@
 ---
 layout: page
-title: About Me
+title: About
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+This is a project deployed using **[fastpages](https://github.com/fastai/fastpages)** [^1] to demonstrate OOP concepts in Python. It is based on the YouTube content by [Corey Schafer](https://coreyms.com/development/python/python-oop-tutorials-complete-series.). 
 
 
 
