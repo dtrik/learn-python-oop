@@ -168,9 +168,9 @@ window.onload = wrap_img;
         <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span> <span class="o">=</span> <span class="n">first_name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">last_name</span>
     
-    <span class="k">def</span> <span class="nf">take_first_oath</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> is taking the following oath: Life before death. Strength before weakness. Journey before destination."</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">oath_count</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">def</span> <span class="nf">speak_first_ideal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> has spoken the following ideal: Life before death. Strength before weakness. Journey before destination."</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ideal_count</span> <span class="o">=</span> <span class="mi">1</span>
 </pre></div>
 
     </div>
@@ -201,9 +201,9 @@ window.onload = wrap_img;
         <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span> <span class="o">=</span> <span class="n">first_name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">last_name</span>
     
-    <span class="k">def</span> <span class="nf">take_first_oath</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> is taking the following oath: Life before death. Strength before weakness. Journey before destination."</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">oath_count</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">def</span> <span class="nf">speak_first_ideal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> has spoken the following ideal: Life before death. Strength before weakness. Journey before destination."</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ideal_count</span> <span class="o">=</span> <span class="mi">1</span>
         <span class="n">Radiant</span><span class="o">.</span><span class="n">num_radiants</span> <span class="o">+=</span> <span class="mi">1</span>
 </pre></div>
 
@@ -239,12 +239,12 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">radiant_1</span> <span class="o">=</span> <span class="n">Radiant</span><span class="p">(</span><span class="s2">"Kaladin"</span><span class="p">,</span> <span class="s2">"Stormblessed"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">Radiant</span><span class="o">.</span><span class="n">num_radiants</span><span class="p">)</span>
-<span class="n">radiant_1</span><span class="o">.</span><span class="n">take_first_oath</span><span class="p">()</span>
+<span class="n">radiant_1</span><span class="o">.</span><span class="n">speak_first_ideal</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">Radiant</span><span class="o">.</span><span class="n">num_radiants</span><span class="p">)</span>
 
 <span class="n">radiant_2</span> <span class="o">=</span> <span class="n">Radiant</span><span class="p">(</span><span class="s2">"Dalinar"</span><span class="p">,</span> <span class="s2">"Kholin"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">Radiant</span><span class="o">.</span><span class="n">num_radiants</span><span class="p">)</span>
-<span class="n">radiant_2</span><span class="o">.</span><span class="n">take_first_oath</span><span class="p">()</span>
+<span class="n">radiant_2</span><span class="o">.</span><span class="n">speak_first_ideal</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">Radiant</span><span class="o">.</span><span class="n">num_radiants</span><span class="p">)</span>
 </pre></div>
 
@@ -259,10 +259,10 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>0
-Kaladin is taking the following oath: Life before death. Strength before weakness. Journey before destination.
+Kaladin has spoken the following ideal: Life before death. Strength before weakness. Journey before destination.
 1
 1
-Dalinar is taking the following oath: Life before death. Strength before weakness. Journey before destination.
+Dalinar has spoken the following ideal: Life before death. Strength before weakness. Journey before destination.
 2
 </pre>
 </div>
@@ -277,7 +277,7 @@ Dalinar is taking the following oath: Life before death. Strength before weaknes
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The 'num_radiants' class variable is updated each time a radiant takes the first oath. This is a variable that should be constant across all the instances of the class. But consider if we want a class level default which can be updated at instance level. For eg: We know that the first oath is also same across all Radiant Orders. But suppose there is a new instance named Python Zen that wants to take a different first oath. Let us see how we can implement that:</p>
+<p>The 'num_radiants' class variable is updated each time a radiant speaks the first ideal. This is a variable that should be constant across all the instances of the class. But consider if we want a class level default which can be updated at instance level. For eg: We know that the first ideal is the same across all Radiant Orders. But suppose there is a new instance named Python Zen that wants to speak a different first ideal. Let us see how we can implement that:</p>
 
 </div>
 </div>
@@ -291,14 +291,14 @@ Dalinar is taking the following oath: Life before death. Strength before weaknes
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Radiant</span><span class="p">():</span>
     <span class="n">num_radiants</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">first_oath</span> <span class="o">=</span> <span class="s2">"Life before death. Strength before weakness. Journey before destination."</span>
+    <span class="n">first_ideal</span> <span class="o">=</span> <span class="s2">"Life before death. Strength before weakness. Journey before destination."</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span> <span class="o">=</span> <span class="n">first_name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">last_name</span>
     
-    <span class="k">def</span> <span class="nf">take_first_oath</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> is taking the first oath: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_oath</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">oath_count</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">def</span> <span class="nf">speak_first_ideal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> has spoken the following ideal: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_ideal</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ideal_count</span> <span class="o">=</span> <span class="mi">1</span>
         <span class="n">Radiant</span><span class="o">.</span><span class="n">num_radiants</span> <span class="o">+=</span> <span class="mi">1</span>
 </pre></div>
 
@@ -319,10 +319,10 @@ Dalinar is taking the following oath: Life before death. Strength before weaknes
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">radiant_1</span> <span class="o">=</span> <span class="n">Radiant</span><span class="p">(</span><span class="s2">"Kaladin"</span><span class="p">,</span> <span class="s2">"Stormblessed"</span><span class="p">)</span>
 <span class="n">radiant_2</span> <span class="o">=</span> <span class="n">Radiant</span><span class="p">(</span><span class="s2">"Python"</span><span class="p">,</span> <span class="s2">"Zen"</span><span class="p">)</span>
 
-<span class="n">radiant_1</span><span class="o">.</span><span class="n">take_first_oath</span><span class="p">()</span>
-<span class="n">radiant_2</span><span class="o">.</span><span class="n">first_oath</span> <span class="o">=</span> <span class="s2">"Beautiful is better than ugly. Explicit is better than implicit. </span><span class="se">\</span>
+<span class="n">radiant_1</span><span class="o">.</span><span class="n">speak_first_ideal</span><span class="p">()</span>
+<span class="n">radiant_2</span><span class="o">.</span><span class="n">first_ideal</span> <span class="o">=</span> <span class="s2">"Beautiful is better than ugly. Explicit is better than implicit. </span><span class="se">\</span>
 <span class="s2">Simple is better than complex."</span>
-<span class="n">radiant_2</span><span class="o">.</span><span class="n">take_first_oath</span><span class="p">()</span>
+<span class="n">radiant_2</span><span class="o">.</span><span class="n">speak_first_ideal</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -335,8 +335,8 @@ Dalinar is taking the following oath: Life before death. Strength before weaknes
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Kaladin is taking the first oath: Life before death. Strength before weakness. Journey before destination.
-Python is taking the first oath: Beautiful is better than ugly. Explicit is better than implicit. Simple is better than complex.
+<pre>Kaladin has spoken the following ideal: Life before death. Strength before weakness. Journey before destination.
+Python has spoken the following ideal: Beautiful is better than ugly. Explicit is better than implicit. Simple is better than complex.
 </pre>
 </div>
 </div>
@@ -350,7 +350,7 @@ Python is taking the first oath: Beautiful is better than ugly. Explicit is bett
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Here we can see how the first_oath class variable is used by default when instance specific value is not available. But if we set the first_oath to a specific value for an instance, within it this new value is used</p>
+<p>Here we can see how the first_ideal class variable is used by default when instance specific value is not available. But if we set the first_ideal to a specific value for an instance, within it this new value is used</p>
 
 </div>
 </div>
@@ -388,7 +388,7 @@ The namespace can be seen by printing the __dict__ attribute of a class or insta
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Class namespace: {'__module__': '__main__', 'num_radiants': 2, 'first_oath': 'Life before death. Strength before weakness. Journey before destination.', '__init__': &lt;function Radiant.__init__ at 0x7f0988676710&gt;, 'take_first_oath': &lt;function Radiant.take_first_oath at 0x7f09886769e0&gt;, '__dict__': &lt;attribute '__dict__' of 'Radiant' objects&gt;, '__weakref__': &lt;attribute '__weakref__' of 'Radiant' objects&gt;, '__doc__': None}
+<pre>Class namespace: {'__module__': '__main__', 'num_radiants': 2, 'first_ideal': 'Life before death. Strength before weakness. Journey before destination.', '__init__': &lt;function Radiant.__init__&gt;, 'speak_first_ideal': &lt;function Radiant.speak_first_ideal&gt;, '__dict__': &lt;attribute '__dict__' of 'Radiant' objects&gt;, '__weakref__': &lt;attribute '__weakref__' of 'Radiant' objects&gt;, '__doc__': None}
 radiant_1 namespace: {'first_name': 'Kaladin', 'last_name': 'Stormblessed'}
 radiant_2 namespace: {'first_name': 'Python', 'last_name': 'Zen'}
 </pre>
@@ -404,7 +404,7 @@ radiant_2 namespace: {'first_name': 'Python', 'last_name': 'Zen'}
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We see that first_oath is not seen in the namespace of radiant_1 and radiant_2 but the class variable can be accessed by the instance as seen below:</p>
+<p>We see that first_ideal is not seen in the namespace of radiant_1 and radiant_2 but the class variable can be accessed by the instance as seen below:</p>
 
 </div>
 </div>
@@ -416,8 +416,8 @@ radiant_2 namespace: {'first_name': 'Python', 'last_name': 'Zen'}
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"First oath of radiant_1 available from the class variable: </span><span class="si">{</span><span class="n">radiant_1</span><span class="o">.</span><span class="n">first_oath</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"First oath of radiant_2 available from the class variable: </span><span class="si">{</span><span class="n">radiant_2</span><span class="o">.</span><span class="n">first_oath</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"First ideal of radiant_1 available from the class variable: </span><span class="si">{</span><span class="n">radiant_1</span><span class="o">.</span><span class="n">first_ideal</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"First ideal of radiant_2 available from the class variable: </span><span class="si">{</span><span class="n">radiant_2</span><span class="o">.</span><span class="n">first_ideal</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -430,8 +430,8 @@ radiant_2 namespace: {'first_name': 'Python', 'last_name': 'Zen'}
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>First oath of radiant_1 available from the class variable: Life before death. Strength before weakness. Journey before destination.
-First oath of radiant_2 available from the class variable: Life before death. Strength before weakness. Journey before destination.
+<pre>First ideal of radiant_1 available from the class variable: Life before death. Strength before weakness. Journey before destination.
+First ideal of radiant_2 available from the class variable: Life before death. Strength before weakness. Journey before destination.
 </pre>
 </div>
 </div>
@@ -449,10 +449,10 @@ First oath of radiant_2 available from the class variable: Life before death. St
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">radiant_1</span><span class="o">.</span><span class="n">take_first_oath</span><span class="p">()</span>
-<span class="n">radiant_2</span><span class="o">.</span><span class="n">first_oath</span> <span class="o">=</span> <span class="s2">"Beautiful is better than ugly. Explicit is better than implicit. </span><span class="se">\</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">radiant_1</span><span class="o">.</span><span class="n">speak_first_ideal</span><span class="p">()</span>
+<span class="n">radiant_2</span><span class="o">.</span><span class="n">first_ideal</span> <span class="o">=</span> <span class="s2">"Beautiful is better than ugly. Explicit is better than implicit. </span><span class="se">\</span>
 <span class="s2">Simple is better than complex."</span>
-<span class="n">radiant_2</span><span class="o">.</span><span class="n">take_first_oath</span><span class="p">()</span>
+<span class="n">radiant_2</span><span class="o">.</span><span class="n">speak_first_ideal</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -465,8 +465,8 @@ First oath of radiant_2 available from the class variable: Life before death. St
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Kaladin is taking the first oath: Life before death. Strength before weakness. Journey before destination.
-Python is taking the first oath: Beautiful is better than ugly. Explicit is better than implicit. Simple is better than complex.
+<pre>Kaladin has spoken the following ideal: Life before death. Strength before weakness. Journey before destination.
+Python has spoken the following ideal: Beautiful is better than ugly. Explicit is better than implicit. Simple is better than complex.
 </pre>
 </div>
 </div>
@@ -480,7 +480,7 @@ Python is taking the first oath: Beautiful is better than ugly. Explicit is bett
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>After the take_first_oath method is called, let us investigate the namespaces of radiant_1 and radiant_2:</p>
+<p>After the speak_first_ideal method is called, let us investigate the namespaces of radiant_1 and radiant_2:</p>
 
 </div>
 </div>
@@ -506,8 +506,8 @@ Python is taking the first oath: Beautiful is better than ugly. Explicit is bett
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>radiant_1 namespace: {'first_name': 'Kaladin', 'last_name': 'Stormblessed', 'oath_count': 1}
-radiant_2 namespace: {'first_name': 'Python', 'last_name': 'Zen', 'first_oath': 'Beautiful is better than ugly. Explicit is better than implicit. Simple is better than complex.', 'oath_count': 1}
+<pre>radiant_1 namespace: {'first_name': 'Kaladin', 'last_name': 'Stormblessed', 'ideal_count': 1}
+radiant_2 namespace: {'first_name': 'Python', 'last_name': 'Zen', 'first_ideal': 'Beautiful is better than ugly. Explicit is better than implicit. Simple is better than complex.', 'ideal_count': 1}
 </pre>
 </div>
 </div>
@@ -521,7 +521,7 @@ radiant_2 namespace: {'first_name': 'Python', 'last_name': 'Zen', 'first_oath': 
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can see that radiant_2 now has a first_oath variable available to it while radiant_1 does not. radiant_1 still uses the class variable while radiant_2 now has an instance-specific value. When we print the first_oath variable of the class and the instances, we can see this difference.</p>
+<p>We can see that radiant_2 now has a first_ideal variable available to it while radiant_1 does not. radiant_1 still uses the class variable while radiant_2 now has an instance-specific value. When we print the first_ideal variable of the class and the instances, we can see this difference.</p>
 
 </div>
 </div>
@@ -533,9 +533,9 @@ radiant_2 namespace: {'first_name': 'Python', 'last_name': 'Zen', 'first_oath': 
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"First oath of class variable: </span><span class="si">{</span><span class="n">Radiant</span><span class="o">.</span><span class="n">first_oath</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"First oath of radiant_1: </span><span class="si">{</span><span class="n">radiant_1</span><span class="o">.</span><span class="n">first_oath</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"First oath of radiant_2: </span><span class="si">{</span><span class="n">radiant_2</span><span class="o">.</span><span class="n">first_oath</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"First ideal of class variable: </span><span class="si">{</span><span class="n">Radiant</span><span class="o">.</span><span class="n">first_ideal</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"First ideal of radiant_1: </span><span class="si">{</span><span class="n">radiant_1</span><span class="o">.</span><span class="n">first_ideal</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"First ideal of radiant_2: </span><span class="si">{</span><span class="n">radiant_2</span><span class="o">.</span><span class="n">first_ideal</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -548,9 +548,9 @@ radiant_2 namespace: {'first_name': 'Python', 'last_name': 'Zen', 'first_oath': 
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>First oath of class variable: Life before death. Strength before weakness. Journey before destination.
-First oath of radiant_1: Life before death. Strength before weakness. Journey before destination.
-First oath of radiant_2: Beautiful is better than ugly. Explicit is better than implicit. Simple is better than complex.
+<pre>First ideal of class variable: Life before death. Strength before weakness. Journey before destination.
+First ideal of radiant_1: Life before death. Strength before weakness. Journey before destination.
+First ideal of radiant_2: Beautiful is better than ugly. Explicit is better than implicit. Simple is better than complex.
 </pre>
 </div>
 </div>
@@ -567,7 +567,7 @@ First oath of radiant_2: Beautiful is better than ugly. Explicit is better than 
 <h2 id="Class-Methods">
 <a class="anchor" href="#Class-Methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Class Methods<a class="anchor-link" href="#Class-Methods"> </a>
 </h2>
-<p>Class methods receive the class itself as the input instead of the instance. Suppose from our above example, we want to update the first oath of the class itself. For this, we need to add a classmethod decorator (@classmethod) above the method definition. Here is how we can do that:</p>
+<p>Class methods receive the class itself as the input instead of the instance. Suppose from our above example, we want to update the first ideal of the class itself. For this, we need to add a classmethod decorator (@classmethod) above the method definition. Here is how we can do that:</p>
 
 </div>
 </div>
@@ -581,26 +581,41 @@ First oath of radiant_2: Beautiful is better than ugly. Explicit is better than 
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Radiant</span><span class="p">():</span>
     <span class="n">num_radiants</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">first_oath</span> <span class="o">=</span> <span class="s2">"Life before death. Strength before weakness. Journey before destination."</span>
+    <span class="n">first_ideal</span> <span class="o">=</span> <span class="s2">"Life before death. Strength before weakness. Journey before destination."</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span> <span class="o">=</span> <span class="n">first_name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">last_name</span>
     
-    <span class="k">def</span> <span class="nf">take_first_oath</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> is taking the first oath: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_oath</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">oath_count</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">def</span> <span class="nf">speak_first_ideal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> has spoken the following ideal: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_ideal</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ideal_count</span> <span class="o">=</span> <span class="mi">1</span>
         <span class="n">Radiant</span><span class="o">.</span><span class="n">num_radiants</span> <span class="o">+=</span> <span class="mi">1</span>
     
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">update_oath</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">oath</span><span class="p">):</span>
-        <span class="bp">cls</span><span class="o">.</span><span class="n">first_oath</span> <span class="o">=</span> <span class="n">oath</span>
-        
-<span class="n">radiant_1</span> <span class="o">=</span> <span class="n">Radiant</span><span class="p">(</span><span class="s2">"Python"</span><span class="p">,</span> <span class="s2">"Zen"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"First oath of class variable: </span><span class="si">{</span><span class="n">Radiant</span><span class="o">.</span><span class="n">first_oath</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"First oath of radiant_1: </span><span class="si">{</span><span class="n">radiant_1</span><span class="o">.</span><span class="n">first_oath</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="n">Radiant</span><span class="o">.</span><span class="n">update_oath</span><span class="p">(</span><span class="s2">"Now is better than never."</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"First oath of class variable: </span><span class="si">{</span><span class="n">Radiant</span><span class="o">.</span><span class="n">first_oath</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"First oath of radiant_1: </span><span class="si">{</span><span class="n">radiant_1</span><span class="o">.</span><span class="n">first_oath</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">update_ideal</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">ideal</span><span class="p">):</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">first_ideal</span> <span class="o">=</span> <span class="n">ideal</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">radiant_1</span> <span class="o">=</span> <span class="n">Radiant</span><span class="p">(</span><span class="s2">"Python"</span><span class="p">,</span> <span class="s2">"Zen"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"First ideal of class variable: </span><span class="si">{</span><span class="n">Radiant</span><span class="o">.</span><span class="n">first_ideal</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"First ideal of radiant_1: </span><span class="si">{</span><span class="n">radiant_1</span><span class="o">.</span><span class="n">first_ideal</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="n">Radiant</span><span class="o">.</span><span class="n">update_ideal</span><span class="p">(</span><span class="s2">"Now is better than never."</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"First ideal of class variable: </span><span class="si">{</span><span class="n">Radiant</span><span class="o">.</span><span class="n">first_ideal</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"First ideal of radiant_1: </span><span class="si">{</span><span class="n">radiant_1</span><span class="o">.</span><span class="n">first_ideal</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -613,10 +628,10 @@ First oath of radiant_2: Beautiful is better than ugly. Explicit is better than 
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>First oath of class variable: Life before death. Strength before weakness. Journey before destination.
-First oath of radiant_1: Life before death. Strength before weakness. Journey before destination.
-First oath of class variable: Now is better than never.
-First oath of radiant_1: Now is better than never.
+<pre>First ideal of class variable: Life before death. Strength before weakness. Journey before destination.
+First ideal of radiant_1: Life before death. Strength before weakness. Journey before destination.
+First ideal of class variable: Now is better than never.
+First ideal of radiant_1: Now is better than never.
 </pre>
 </div>
 </div>
@@ -652,19 +667,19 @@ First oath of radiant_1: Now is better than never.
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Radiant</span><span class="p">():</span>
     <span class="n">num_radiants</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">first_oath</span> <span class="o">=</span> <span class="s2">"Life before death. Strength before weakness. Journey before destination."</span>
+    <span class="n">first_ideal</span> <span class="o">=</span> <span class="s2">"Life before death. Strength before weakness. Journey before destination."</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span> <span class="o">=</span> <span class="n">first_name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">last_name</span>
     
-    <span class="k">def</span> <span class="nf">take_first_oath</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> is taking the first oath: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_oath</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">oath_count</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">def</span> <span class="nf">speak_first_ideal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> has spoken the following ideal: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_ideal</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ideal_count</span> <span class="o">=</span> <span class="mi">1</span>
         <span class="n">Radiant</span><span class="o">.</span><span class="n">num_radiants</span> <span class="o">+=</span> <span class="mi">1</span>
     
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">update_oath</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">oath</span><span class="p">):</span>
-        <span class="bp">cls</span><span class="o">.</span><span class="n">first_oath</span> <span class="o">=</span> <span class="n">oath</span>
+    <span class="k">def</span> <span class="nf">update_ideal</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">ideal</span><span class="p">):</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">first_ideal</span> <span class="o">=</span> <span class="n">ideal</span>
     
     <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">from_full_name</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">full_name</span><span class="p">):</span>
@@ -726,19 +741,19 @@ Stormblessed
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Radiant</span><span class="p">():</span>
     <span class="n">num_radiants</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">first_oath</span> <span class="o">=</span> <span class="s2">"Life before death. Strength before weakness. Journey before destination."</span>
+    <span class="n">first_ideal</span> <span class="o">=</span> <span class="s2">"Life before death. Strength before weakness. Journey before destination."</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span> <span class="o">=</span> <span class="n">first_name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">last_name</span>
     
-    <span class="k">def</span> <span class="nf">take_first_oath</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> is taking the first oath: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_oath</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">oath_count</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">def</span> <span class="nf">speak_first_ideal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> has spoken the following ideal: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_ideal</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ideal_count</span> <span class="o">=</span> <span class="mi">1</span>
         <span class="n">Radiant</span><span class="o">.</span><span class="n">num_radiants</span> <span class="o">+=</span> <span class="mi">1</span>
     
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">update_oath</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">oath</span><span class="p">):</span>
-        <span class="bp">cls</span><span class="o">.</span><span class="n">first_oath</span> <span class="o">=</span> <span class="n">oath</span>
+    <span class="k">def</span> <span class="nf">update_ideal</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">ideal</span><span class="p">):</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">first_ideal</span> <span class="o">=</span> <span class="n">ideal</span>
     
     <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">from_full_name</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">full_name</span><span class="p">):</span>
@@ -779,7 +794,7 @@ Blood of my father
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now that our newly created Radiants from full names can swear different first oaths using classmethods as well as curse using staticmethods, let us stop and look at inheritance in the next blog.</p>
+<p>Now that our newly created Radiants from full names can swear different first ideals using classmethods as well as curse using staticmethods, let us stop and look at inheritance in the next blog.</p>
 
 </div>
 </div>

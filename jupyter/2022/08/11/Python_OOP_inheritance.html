@@ -163,28 +163,29 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Radiant</span><span class="p">():</span>
     <span class="n">num_radiants</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">first_oath</span> <span class="o">=</span> <span class="s2">"Life before death. Strength before weakness. Journey before destination."</span>
+    <span class="n">first_ideal</span> <span class="o">=</span> <span class="s2">"Life before death. Strength before weakness. Journey before destination."</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span> <span class="o">=</span> <span class="n">first_name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">last_name</span>
     
-    <span class="k">def</span> <span class="nf">take_first_oath</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> is taking the first oath: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_oath</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">oath_count</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">def</span> <span class="nf">speak_first_ideal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> has spoken the first ideal: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_ideal</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ideal_count</span> <span class="o">=</span> <span class="mi">1</span>
         <span class="n">Radiant</span><span class="o">.</span><span class="n">num_radiants</span> <span class="o">+=</span> <span class="mi">1</span>
     
-    <span class="k">def</span> <span class="nf">take_second_oath</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="s2">"oath_count"</span><span class="p">):</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">oath_count</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> is taking the second oath: </span><span class="si">{</span><span class="n">Windrunner</span><span class="o">.</span><span class="n">second_oath</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">oath_count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">def</span> <span class="nf">speak_second_ideal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="s2">"ideal_count"</span><span class="p">):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ideal_count</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> has spoken the second ideal: </span><span class="si">{</span><span class="n">Windrunner</span><span class="o">.</span><span class="n">second_ideal</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">ideal_count</span> <span class="o">+=</span> <span class="mi">1</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">"You have already taken the second oath"</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"You have already spoken the second ideal"</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">"Take the first oath before jumping ahead"</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Speak the first ideal before jumping ahead"</span><span class="p">)</span>
+    
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">update_oath</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">oath</span><span class="p">):</span>
-        <span class="bp">cls</span><span class="o">.</span><span class="n">first_oath</span> <span class="o">=</span> <span class="n">oath</span>
+    <span class="k">def</span> <span class="nf">update_ideal</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">ideal</span><span class="p">):</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">first_ideal</span> <span class="o">=</span> <span class="n">ideal</span>
     
     <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">from_full_name</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">full_name</span><span class="p">):</span>
@@ -225,10 +226,10 @@ window.onload = wrap_img;
     <span class="k">pass</span>
 
 <span class="n">windrunner_1</span> <span class="o">=</span> <span class="n">Windrunner</span><span class="p">(</span><span class="s2">"Kaladin"</span><span class="p">,</span> <span class="s2">"Stormblessed"</span><span class="p">)</span>
-<span class="n">windrunner_1</span><span class="o">.</span><span class="n">take_first_oath</span><span class="p">()</span>
+<span class="n">windrunner_1</span><span class="o">.</span><span class="n">speak_first_ideal</span><span class="p">()</span>
 
 <span class="n">bondsmith_1</span> <span class="o">=</span> <span class="n">Bondsmith</span><span class="p">(</span><span class="s2">"Dalinar"</span><span class="p">,</span> <span class="s2">"Thorin"</span><span class="p">)</span>
-<span class="n">bondsmith_1</span><span class="o">.</span><span class="n">take_first_oath</span><span class="p">()</span>
+<span class="n">bondsmith_1</span><span class="o">.</span><span class="n">speak_first_ideal</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -241,8 +242,8 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Kaladin is taking the first oath: Life before death. Strength before weakness. Journey before destination.
-Dalinar is taking the first oath: Life before death. Strength before weakness. Journey before destination.
+<pre>Kaladin has spoken the first ideal: Life before death. Strength before weakness. Journey before destination.
+Dalinar has spoken the first ideal: Life before death. Strength before weakness. Journey before destination.
 </pre>
 </div>
 </div>
@@ -286,8 +287,8 @@ Dalinar is taking the first oath: Life before death. Strength before weakness. J
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Windrunner class namespace: {'__module__': '__main__', '__doc__': None}
 Bondsmith class namespace: {'__module__': '__main__', '__doc__': None}
-Kaladin namespace: {'first_name': 'Kaladin', 'last_name': 'Stormblessed', 'oath_count': 1}
-Dalinar namespace: {'first_name': 'Dalinar', 'last_name': 'Thorin', 'oath_count': 1}
+Kaladin namespace: {'first_name': 'Kaladin', 'last_name': 'Stormblessed', 'ideal_count': 1}
+Dalinar namespace: {'first_name': 'Dalinar', 'last_name': 'Thorin', 'ideal_count': 1}
 </pre>
 </div>
 </div>
@@ -315,7 +316,7 @@ Dalinar namespace: {'first_name': 'Dalinar', 'last_name': 'Thorin', 'oath_count'
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Windrunner</span><span class="p">(</span><span class="n">Radiant</span><span class="p">):</span>
     <span class="n">windrunner_count</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">second_oath</span> <span class="o">=</span> <span class="s2">"I will protect those who cannot protect themselves"</span>
+    <span class="n">second_ideal</span> <span class="o">=</span> <span class="s2">"I will protect those who cannot protect themselves"</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">squire</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">squire_count</span> <span class="o">=</span> <span class="mi">0</span>
@@ -350,7 +351,7 @@ Dalinar namespace: {'first_name': 'Dalinar', 'last_name': 'Thorin', 'oath_count'
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Bondsmith</span><span class="p">(</span><span class="n">Radiant</span><span class="p">):</span>
     <span class="n">bondsmith_count</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">vision_count</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">second_oath</span> <span class="o">=</span> <span class="s2">"I will unite instead of divide. I will bring men together."</span>
+    <span class="n">second_ideal</span> <span class="o">=</span> <span class="s2">"I will unite instead of divide. I will bring men together."</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">spren</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">spren</span> <span class="o">=</span> <span class="n">spren</span>
@@ -386,8 +387,8 @@ Employee.__init__(self,first_name, last_name)</p>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">windrunner_1</span> <span class="o">=</span> <span class="n">Windrunner</span><span class="p">(</span><span class="s2">"Kaladin"</span><span class="p">,</span> <span class="s2">"Stormblessed"</span><span class="p">,</span> <span class="s2">"Lopen"</span><span class="p">)</span>
-<span class="n">windrunner_1</span><span class="o">.</span><span class="n">take_first_oath</span><span class="p">()</span>
-<span class="n">windrunner_1</span><span class="o">.</span><span class="n">take_second_oath</span><span class="p">()</span>
+<span class="n">windrunner_1</span><span class="o">.</span><span class="n">speak_first_ideal</span><span class="p">()</span>
+<span class="n">windrunner_1</span><span class="o">.</span><span class="n">speak_second_ideal</span><span class="p">()</span>
 <span class="n">windrunner_1</span><span class="o">.</span><span class="n">select_squire</span><span class="p">(</span><span class="s2">"Rock"</span><span class="p">)</span>
 <span class="n">Windrunner</span><span class="o">.</span><span class="n">windrunner_count</span>
 <span class="n">windrunner_1</span><span class="o">.</span><span class="n">squires</span>
@@ -404,8 +405,8 @@ Employee.__init__(self,first_name, last_name)</p>
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Kaladin is taking the first oath: Life before death. Strength before weakness. Journey before destination.
-Kaladin is taking the second oath: I will protect those who cannot protect themselves
+<pre>Kaladin has spoken the first ideal: Life before death. Strength before weakness. Journey before destination.
+Kaladin has spoken the second ideal: I will protect those who cannot protect themselves
 Rock is now squiring for Kaladin
 </pre>
 </div>
@@ -435,8 +436,8 @@ Rock is now squiring for Kaladin
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">bondsmith_1</span> <span class="o">=</span> <span class="n">Bondsmith</span><span class="p">(</span><span class="s2">"Dalinar"</span><span class="p">,</span> <span class="s2">"Thorin"</span><span class="p">,</span> <span class="s2">"Stormfather"</span><span class="p">)</span>
-<span class="n">bondsmith_1</span><span class="o">.</span><span class="n">take_first_oath</span><span class="p">()</span>
-<span class="n">bondsmith_1</span><span class="o">.</span><span class="n">take_second_oath</span><span class="p">()</span>
+<span class="n">bondsmith_1</span><span class="o">.</span><span class="n">speak_first_ideal</span><span class="p">()</span>
+<span class="n">bondsmith_1</span><span class="o">.</span><span class="n">speak_second_ideal</span><span class="p">()</span>
 <span class="n">bondsmith_1</span><span class="o">.</span><span class="n">undergo_vision</span><span class="p">(</span><span class="s2">"Recreance"</span><span class="p">)</span>
 </pre></div>
 
@@ -450,8 +451,8 @@ Rock is now squiring for Kaladin
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Dalinar is taking the first oath: Life before death. Strength before weakness. Journey before destination.
-Dalinar is taking the second oath: I will protect those who cannot protect themselves
+<pre>Dalinar has spoken the first ideal: Life before death. Strength before weakness. Journey before destination.
+Dalinar has spoken the second ideal: I will protect those who cannot protect themselves
 Dalinar had a vision of Recreance
 </pre>
 </div>
@@ -484,7 +485,10 @@ Dalinar had a vision of Recreance
     </div>
 </div>
 </div>
-
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Output" data-close="Show Output"></summary>
+        <p>
+</p>
 <div class="output_wrapper">
 <div class="output">
 
@@ -511,23 +515,23 @@ class Windrunner(Radiant)
  |  ----------------------------------------------------------------------
  |  Data and other attributes defined here:
  |  
- |  second_oath = 'I will protect those who cannot protect themselves'
+ |  second_ideal = 'I will protect those who cannot protect themselves'
  |  
  |  windrunner_count = 1
  |  
  |  ----------------------------------------------------------------------
  |  Methods inherited from Radiant:
  |  
- |  take_first_oath(self)
+ |  speak_first_ideal(self)
  |  
- |  take_second_oath(self)
+ |  speak_second_ideal(self)
  |  
  |  ----------------------------------------------------------------------
  |  Class methods inherited from Radiant:
  |  
  |  from_full_name(full_name) from builtins.type
  |  
- |  update_oath(oath) from builtins.type
+ |  update_ideal(ideal) from builtins.type
  |  
  |  ----------------------------------------------------------------------
  |  Static methods inherited from Radiant:
@@ -546,7 +550,7 @@ class Windrunner(Radiant)
  |  ----------------------------------------------------------------------
  |  Data and other attributes inherited from Radiant:
  |  
- |  first_oath = 'Life before death. Strength before weakness. Journey bef...
+ |  first_ideal = 'Life before death. Strength before weakness. Journey be...
  |  
  |  num_radiants = 4
 
@@ -558,17 +562,55 @@ None
 </div>
 </div>
 
+    </details>
 </div>
     
 
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Two other useful functions are isinstance and issubclass. As the names indicate, the</p>
+<p>Two other useful functions are isinstance and issubclass. As the names indicate, they can  be used to identify relationships between classes and instances.</p>
 
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">windrunner_1</span><span class="p">,</span> <span class="n">Bondsmith</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">windrunner_1</span><span class="p">,</span> <span class="n">Windrunner</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">issubclass</span><span class="p">(</span><span class="n">Bondsmith</span><span class="p">,</span> <span class="n">Radiant</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">issubclass</span><span class="p">(</span><span class="n">Bondsmith</span><span class="p">,</span> <span class="n">Windrunner</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>False
+True
+True
+False
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 

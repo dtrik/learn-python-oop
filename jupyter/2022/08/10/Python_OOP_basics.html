@@ -416,7 +416,7 @@ Kholin
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Each instance of the class Radiant can take the first oath: "Life before death. Strength before weakness. Journey before destination." Let us create a method in the class to take this oath.</p>
+<p>Each instance of the class Radiant can speak the first ideal: "Life before death. Strength before weakness. Journey before destination." Let us create a method in the class to take this ideal.</p>
 
 </div>
 </div>
@@ -434,13 +434,28 @@ Kholin
         <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span> <span class="o">=</span> <span class="n">first_name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">last_name</span>
     
-    <span class="k">def</span> <span class="nf">take_first_oath</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> is taking the following oath: Life before death. Strength before weakness. Journey before destination."</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">oath_count</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">def</span> <span class="nf">speak_first_ideal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> has spoken the following ideal: Life before death. Strength before weakness. Journey before destination."</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ideal_count</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
     
-<span class="n">radiant_1</span> <span class="o">=</span> <span class="n">Radiant</span><span class="p">(</span><span class="s2">"Kaladin"</span><span class="p">,</span> <span class="s2">"Stormblessed"</span><span class="p">)</span>
-<span class="n">radiant_1</span><span class="o">.</span><span class="n">take_first_oath</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">radiant_1</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">radiant_1</span><span class="o">.</span><span class="n">last_name</span><span class="si">}</span><span class="s2"> has taken </span><span class="si">{</span><span class="n">radiant_1</span><span class="o">.</span><span class="n">oath_count</span><span class="si">}</span><span class="s2"> oaths"</span><span class="p">)</span>
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">radiant_1</span> <span class="o">=</span> <span class="n">Radiant</span><span class="p">(</span><span class="s2">"Kaladin"</span><span class="p">,</span> <span class="s2">"Stormblessed"</span><span class="p">)</span>
+<span class="n">radiant_1</span><span class="o">.</span><span class="n">speak_first_ideal</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">radiant_1</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">radiant_1</span><span class="o">.</span><span class="n">last_name</span><span class="si">}</span><span class="s2"> has spoken </span><span class="si">{</span><span class="n">radiant_1</span><span class="o">.</span><span class="n">ideal_count</span><span class="si">}</span><span class="s2"> ideals"</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -453,8 +468,8 @@ Kholin
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Kaladin is taking the following oath: Life before death. Strength before weakness. Journey before destination.
-Kaladin Stormblessed has taken 1 oaths
+<pre>Kaladin has spoken the following ideal: Life before death. Strength before weakness. Journey before destination.
+Kaladin Stormblessed has spoken 1 ideals
 </pre>
 </div>
 </div>
@@ -468,7 +483,7 @@ Kaladin Stormblessed has taken 1 oaths
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The above method not only prints the first oath but also updates a newly created attribute for the instance called 'oath_count'. Inspired by Kaladin, Dalinar is also ready to take the first oath.</p>
+<p>The above method not only prints the first ideal but also updates a newly created attribute for the instance called 'ideal_count'. Inspired by Kaladin, Dalinar is also ready to speak the first ideal</p>
 
 </div>
 </div>
@@ -481,8 +496,8 @@ Kaladin Stormblessed has taken 1 oaths
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">radiant_2</span> <span class="o">=</span> <span class="n">Radiant</span><span class="p">(</span><span class="s2">"Dalinar"</span><span class="p">,</span> <span class="s2">"Thorin"</span><span class="p">)</span>
-<span class="n">radiant_2</span><span class="o">.</span><span class="n">take_first_oath</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">radiant_2</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">radiant_2</span><span class="o">.</span><span class="n">last_name</span><span class="si">}</span><span class="s2"> has taken </span><span class="si">{</span><span class="n">radiant_2</span><span class="o">.</span><span class="n">oath_count</span><span class="si">}</span><span class="s2"> oaths"</span><span class="p">)</span>
+<span class="n">radiant_2</span><span class="o">.</span><span class="n">speak_first_ideal</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">radiant_2</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">radiant_2</span><span class="o">.</span><span class="n">last_name</span><span class="si">}</span><span class="s2"> has spoken </span><span class="si">{</span><span class="n">radiant_2</span><span class="o">.</span><span class="n">ideal_count</span><span class="si">}</span><span class="s2"> ideals"</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -495,8 +510,8 @@ Kaladin Stormblessed has taken 1 oaths
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Dalinar is taking the following oath: Life before death. Strength before weakness. Journey before destination.
-Dalinar Thorin has taken 1 oaths
+<pre>Dalinar has spoken the following ideal: Life before death. Strength before weakness. Journey before destination.
+Dalinar Thorin has spoken 1 ideals
 </pre>
 </div>
 </div>
@@ -522,8 +537,8 @@ Dalinar Thorin has taken 1 oaths
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">radiant_2</span><span class="o">.</span><span class="n">take_first_oath</span><span class="p">()</span>
-<span class="n">Radiant</span><span class="o">.</span><span class="n">take_first_oath</span><span class="p">(</span><span class="n">radiant_2</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">radiant_2</span><span class="o">.</span><span class="n">speak_first_ideal</span><span class="p">()</span>
+<span class="n">Radiant</span><span class="o">.</span><span class="n">speak_first_ideal</span><span class="p">(</span><span class="n">radiant_2</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -536,8 +551,8 @@ Dalinar Thorin has taken 1 oaths
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Dalinar is taking the following oath: Life before death. Strength before weakness. Journey before destination.
-Dalinar is taking the following oath: Life before death. Strength before weakness. Journey before destination.
+<pre>Dalinar has spoken the following ideal: Life before death. Strength before weakness. Journey before destination.
+Dalinar has spoken the following ideal: Life before death. Strength before weakness. Journey before destination.
 </pre>
 </div>
 </div>
@@ -572,20 +587,21 @@ Dalinar is taking the following oath: Life before death. Strength before weaknes
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Radiant</span><span class="p">():</span>
+    <span class="s2">"Class with constructor and method"</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span> <span class="o">=</span> <span class="n">first_name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">last_name</span>
     
-    <span class="k">def</span> <span class="nf">take_first_oath</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> is taking the following oath: Life before death. Strength before weakness. Journey before destination."</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">oath_count</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">def</span> <span class="nf">speak_first_ideal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> has spoken the following ideal: Life before death. Strength before weakness. Journey before destination."</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ideal_count</span> <span class="o">=</span> <span class="mi">1</span>
     
 <span class="n">radiant_1</span> <span class="o">=</span> <span class="n">Radiant</span><span class="p">(</span><span class="s2">"Kaladin"</span><span class="p">,</span> <span class="s2">"Stormblessed"</span><span class="p">)</span>
-<span class="n">radiant_1</span><span class="o">.</span><span class="n">take_first_oath</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">radiant_1</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">radiant_1</span><span class="o">.</span><span class="n">last_name</span><span class="si">}</span><span class="s2"> has taken </span><span class="si">{</span><span class="n">radiant_1</span><span class="o">.</span><span class="n">oath_count</span><span class="si">}</span><span class="s2"> oaths"</span><span class="p">)</span>
+<span class="n">radiant_1</span><span class="o">.</span><span class="n">speak_first_ideal</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">radiant_1</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">radiant_1</span><span class="o">.</span><span class="n">last_name</span><span class="si">}</span><span class="s2"> has spoken </span><span class="si">{</span><span class="n">radiant_1</span><span class="o">.</span><span class="n">ideal_count</span><span class="si">}</span><span class="s2"> ideals"</span><span class="p">)</span>
 <span class="n">radiant_2</span> <span class="o">=</span> <span class="n">Radiant</span><span class="p">(</span><span class="s2">"Dalinar"</span><span class="p">,</span> <span class="s2">"Thorin"</span><span class="p">)</span>
-<span class="n">radiant_2</span><span class="o">.</span><span class="n">take_first_oath</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">radiant_2</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">radiant_2</span><span class="o">.</span><span class="n">last_name</span><span class="si">}</span><span class="s2"> has taken </span><span class="si">{</span><span class="n">radiant_2</span><span class="o">.</span><span class="n">oath_count</span><span class="si">}</span><span class="s2"> oaths"</span><span class="p">)</span>
+<span class="n">radiant_2</span><span class="o">.</span><span class="n">speak_first_ideal</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">radiant_2</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">radiant_2</span><span class="o">.</span><span class="n">last_name</span><span class="si">}</span><span class="s2"> has spoken </span><span class="si">{</span><span class="n">radiant_2</span><span class="o">.</span><span class="n">ideal_count</span><span class="si">}</span><span class="s2"> ideals"</span><span class="p">)</span>
 </pre></div>
 
     </div>
